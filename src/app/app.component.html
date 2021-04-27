@@ -1,0 +1,20 @@
+<router-outlet></router-outlet>
+<button  class="btn btn-primary" routerLink="/user">Go To Home</button>
+
+<ul  *ngFor="let tutorial of users | async">
+    <li>
+      <a [href]="tutorial.firstName" target="_blank">{{ tutorial.firstName }}</a>
+    </li>
+    <li>
+        <a [href]="tutorial.lastName" target="_blank">{{ tutorial.lastName }}</a>
+    </li>
+    <li>
+        <a [href]="tutorial.email" target="_blank">{{ tutorial.email }}</a>
+    </li>
+    <li>
+        <a [href]="tutorial.monthlyAdBudget" target="_blank">{{ tutorial.monthlyAdBudget }}</a>
+    </li>
+    <li>
+        <a [href]="tutorial.phoneNumber" target="_blank">{{ tutorial.phoneNumber }}</a>
+    </li>
+  </ul>

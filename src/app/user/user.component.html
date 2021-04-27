@@ -1,0 +1,39 @@
+<div id="flex-container" class="shadow p-3 mb-5 bg-white rounded">
+<form  [formGroup]="myForm">
+    <div class="flex-item-left">
+      <label>
+        First Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input  id="firstName"formControlName="firstName" placeholder="Your name" #firstName>
+      </label>
+    </div>
+    <div  class="flex-item-right">
+        <label>
+          Last Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input id="lastName"formControlName="lastName" placeholder="Your name"#lastName>
+        </label>
+      </div>
+    <div class="flex-item-left">
+      <label>
+        Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="email" formControlName="email" placeholder="Your email" #email>
+      </label>
+    </div>
+    <div class="flex-item-right">
+        <label>
+          Monthly Advertising Budget:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input id="monthlyAdBudget" formControlName="monthlyAdBudget" placeholder="Your email"#monthlyAdBudget>
+        </label>
+      </div>
+    <div class="flex-item-left">
+      <label>
+        Phone Number
+        <input id="phoneNumber"formControlName="phoneNumber" placeholder="Your message"#phoneNumber>
+      </label>
+    </div>
+    <br>
+    <div>    <button class="btn btn-primary" type="submit" (click)="onSubmit()">Send</button
+      >&nbsp;&nbsp;&nbsp;
+      <button class="btn btn-primary" (click)="clearForm()">Reset</button></div>
+   
+  </form>
+</div>

@@ -1,34 +1,56 @@
-<div id="flex-container" class="shadow p-3 mb-5 bg-white rounded">
+<div id="flex-container" class="shadow p-3 mb-5 bg-white rounded" name="contain">
 <form  [formGroup]="myForm">
-    <div class="flex-item-left">
+    <div class="flex-item-left" >
       <label>
         First Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input  id="firstName"formControlName="firstName" placeholder="Your name" #firstName>
+        <input  id="firstName"formControlName="firstName" placeholder="first Name" #firstName required>
+      
       </label>
+      <span id="firstname" class="text-danger"
+      *ngIf="(f.firstName.touched || submitted ) && f.firstName.errors?.required">
+      required field
+  </span>
     </div>
     <div  class="flex-item-right">
         <label>
           Last Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <input id="lastName"formControlName="lastName" placeholder="Your name"#lastName>
+          <input id="lastName"formControlName="lastName" placeholder="Last Name"#lastName required>
         </label>
+        <span id="lastname" class="text-danger"
+        *ngIf="(f.lastName.touched  || submitted) && f.lastName.errors?.required">
+        required field
+    </span>
       </div>
     <div class="flex-item-left">
       <label>
         Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input id="email" formControlName="email" placeholder="Your email" #email>
+        <input id="email" formControlName="email" placeholder="Email" #email required>
+        
       </label>
+      <span id="email" class="text-danger"
+      *ngIf="(f.email.touched || submitted ) && f.email.errors?.required">
+      required field
+  </span>
     </div>
     <div class="flex-item-right">
         <label>
           Monthly Advertising Budget:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <input id="monthlyAdBudget" formControlName="monthlyAdBudget" placeholder="Your email"#monthlyAdBudget>
+          <input id="monthlyAdBudget" formControlName="monthlyAdBudget" placeholder="Monthly Advertising Budget"#monthlyAdBudget required>
         </label>
+        <span id="monthlyAdBudget" class="text-danger"
+        *ngIf="(f.monthlyAdBudget.touched  || submitted ) && f.monthlyAdBudget.errors?.required">
+         required field
+    </span>
       </div>
     <div class="flex-item-left">
       <label>
         Phone Number
-        <input id="phoneNumber"formControlName="phoneNumber" placeholder="Your message"#phoneNumber>
+        <input id="phoneNumber"formControlName="phoneNumber" placeholder="Phone Number"#phoneNumber required> 
       </label>
+      <span id="phoneNumber" class="text-danger"
+      *ngIf="(f.phoneNumber.touched || submitted ) && f.phoneNumber.errors?.required">
+      required field
+  </span>
     </div>
     <br>
     <div>    <button class="btn btn-primary" type="submit" (click)="onSubmit()">Send</button

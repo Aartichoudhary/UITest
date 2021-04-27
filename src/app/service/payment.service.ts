@@ -6,7 +6,7 @@ import { User } from '../UserModel/user';
   providedIn: 'root'
 })
 export class PaymentService {
-  baseURL: string = "http://localhost:3000/";
+  baseURL: string = "http://localhost:3000/users";
   constructor(private http:HttpClient) { }
 saveUser(user:User){
   const headers = { 'content-type': 'application/json'}  

@@ -1,19 +1,180 @@
 {
-  "posts": [
+  "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "firstName": "arti",
+      "lastName": "ch",
+      "email": "abc@gmail.com",
+      " monthlyAdBudget": "ave",
+      "phoneNumber": 76528374
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "firstName": "arti",
+      "lastName": "ch",
+      "email": "aarti90839@gmail.com",
+      "monthlyAdBudget": "ew",
+      "phoneNumber": "ewe",
+      "id": 2
+    },
+    {
+      "firstName": "arti",
+      "lastName": "ch",
+      "email": "abc@gmail.com",
+      "monthlyAdBudget": "ew",
+      "phoneNumber": "78094234",
+      "id": 3
+    },
+    {
+      "firstName": "arti",
+      "lastName": "ch",
+      "email": "xyz@gmail.com",
+      "monthlyAdBudget": "ew",
+      "phoneNumber": "ewe",
+      "id": 4
+    },
+    {
+      "firstName": "arti",
+      "lastName": "ch",
+      "email": "jhf@gmail.com",
+      "monthlyAdBudget": "ew",
+      "phoneNumber": "ewe",
+      "id": 5
+    },
+    {
+      "firstName": "arti",
+      "lastName": "ch",
+      "email": "abc@gmail.com",
+      "monthlyAdBudget": "",
+      "phoneNumber": "812964893758",
+      "id": 6
+    },
+    {
+      "firstName": "",
+      "lastName": "ch",
+      "email": "aarti90839@gmail.com",
+      "monthlyAdBudget": "ew",
+      "phoneNumber": "ewe",
+      "id": 7
+    },
+    {
+      "firstName": "",
+      "lastName": "ch",
+      "email": "",
+      "monthlyAdBudget": "",
+      "phoneNumber": "",
+      "id": 8
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "monthlyAdBudget": "",
+      "phoneNumber": "",
+      "id": 9
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "monthlyAdBudget": "",
+      "phoneNumber": "",
+      "id": 10
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "monthlyAdBudget": "",
+      "phoneNumber": "",
+      "id": 11
+    },
+    {
+      "firstName": "arti",
+      "lastName": "",
+      "email": "",
+      "monthlyAdBudget": "",
+      "phoneNumber": "",
+      "id": 12
+    },
+    {
+      "firstName": "arti",
+      "lastName": "ch",
+      "email": "",
+      "monthlyAdBudget": "",
+      "phoneNumber": "",
+      "id": 13
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "monthlyAdBudget": "",
+      "phoneNumber": "",
+      "id": 14
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "monthlyAdBudget": "",
+      "phoneNumber": "",
+      "id": 15
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "monthlyAdBudget": "",
+      "phoneNumber": "",
+      "id": 16
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "monthlyAdBudget": "",
+      "phoneNumber": "",
+      "id": 17
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "monthlyAdBudget": "",
+      "phoneNumber": "",
+      "id": 18
+    },
+    {
+      "firstName": "arti",
+      "lastName": "ch",
+      "email": "abc@gmail.com",
+      "monthlyAdBudget": "ew",
+      "phoneNumber": "812964893758",
+      "id": 19
+    },
+    {
+      "firstName": "arti",
+      "lastName": "ch",
+      "email": "abc@gmail.com",
+      "monthlyAdBudget": "ew",
+      "phoneNumber": "812964893758",
+      "id": 20
+    },
+    {
+      "firstName": null,
+      "lastName": null,
+      "email": null,
+      "monthlyAdBudget": null,
+      "phoneNumber": null,
+      "id": 21
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "monthlyAdBudget": "",
+      "phoneNumber": "",
+      "id": 22
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

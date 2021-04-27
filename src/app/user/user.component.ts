@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 
 import { AppState } from '../app.state';
@@ -20,22 +20,25 @@ export class UserComponent implements OnInit {
  email;
  phoneNumber;
  monthlyAdBudget;
-
+ submitted = false;
   ngOnInit() {
-    this.myForm = new FormGroup({
-      firstName: new FormControl(''),
-      lastName: new FormControl(''),
-    email: new FormControl(''),
-    monthlyAdBudget: new FormControl(''),
-    phoneNumber: new FormControl('')
+    this.myForm = this._formBuilder.group({
+      firstName: new FormControl('' ,Validators.required),
+      lastName: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    monthlyAdBudget: new FormControl('', Validators.required),
+    phoneNumber: new FormControl('', Validators.required)
     });
-
+console.log(this.myForm)
   }
-  constructor(private store: Store<AppState>,private toastr: ToastrService,private paymentService:PaymentService) {
+  get f() { return this.myForm.controls; }
+  constructor(private store: Store<AppState>,private toastr: ToastrService,private paymentService:PaymentService
+   , private _formBuilder: FormBuilder) {
  
   }
-  data=[]
+  data=[];
   onSubmit() {
+    this.submitted = true;
  this.firstName=this.myForm.value.firstName;
  this.lastName=this.myForm.value.lastName;
  this.email=this.myForm.value.email;
@@ -45,15 +48,20 @@ export class UserComponent implements OnInit {
 
   this.paymentService.saveUser(this.myForm.value)
   .subscribe(data => {
-    console.log(data)
+   this.data.push(data)
+
+    console.log(this.data)
    
   })   
-  this.toastr.success("Hello, I'm the toastr message.")
-    
+  if(this.data.length){
+    this.toastr.success("Your details has been saved successfully")
+  }
+  if(this.data.length)
     this.store.dispatch(new UserAction.AddUser({firstName:this.firstName,lastName:this.lastName,
       email:this.email,monthlyAdBudget:this.monthlyAdBudget,phoneNumber:this.phoneNumber,}) )
   }
   clearForm() {
    this.myForm.reset();
     }
+   
 }
